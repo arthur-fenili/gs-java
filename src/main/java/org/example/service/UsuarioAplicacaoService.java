@@ -9,22 +9,22 @@ public class UsuarioAplicacaoService {
     private UsuarioAplicacaoRepository usuarioAplicacaoRepository = new UsuarioAplicacaoRepository();
 
     public void create(UsuarioAplicacao usuarioAplicacao) {
-        usuarioAplicacaoRepository.Create(usuarioAplicacao);
+        usuarioAplicacaoRepository.create(usuarioAplicacao);
     }
 
     public UsuarioAplicacao readById(int id) {
-        return usuarioAplicacaoRepository.ReadById(id);
+        return usuarioAplicacaoRepository.readById(id);
     }
 
     public List<UsuarioAplicacao> readAll() {
-        return usuarioAplicacaoRepository.ReadAll();
+        return usuarioAplicacaoRepository.readAll();
     }
 
     public void updateById(UsuarioAplicacao usuarioAplicacao, int id) {
-        usuarioAplicacaoRepository.UpdateById(usuarioAplicacao, id);
+        usuarioAplicacaoRepository.updateById(usuarioAplicacao, id);
     }
 
     public void deleteById(int id) {
-        usuarioAplicacaoRepository.DeleteById(id);
+        usuarioAplicacaoRepository.deleteById(id);
     }
 }

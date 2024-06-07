@@ -3,7 +3,7 @@ package org.example.entities;
 import java.sql.Date;
 import java.util.StringJoiner;
 
-public class ClienteNewsletter {
+public class ClienteNewsletter extends _BaseEntity{
 
     private Date dataEnvio;
 

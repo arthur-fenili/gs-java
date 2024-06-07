@@ -2,7 +2,7 @@ package org.example.entities;
 
 import java.util.StringJoiner;
 
-public class Login {
+public class Login extends _BaseEntity {
     private String email;
     private String senha;
     private String tipoUsuario;

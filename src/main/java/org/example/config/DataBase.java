@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class DataBase {
     private static final String URL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL";
-    private static final String USER = "RM553185";
-    private static final String PASSWORD = "130304";
+    private static final String USER = "rm552752";
+    private static final String PASSWORD = "110900";
 
     public Connection getConnection() {
         try {

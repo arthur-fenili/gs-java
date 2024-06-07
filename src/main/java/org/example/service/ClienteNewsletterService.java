@@ -9,22 +9,22 @@ public class ClienteNewsletterService {
     private ClienteNewsletterRepository clienteNewsletterRepository = new ClienteNewsletterRepository();
 
     public void create(ClienteNewsletter clienteNewsletter) {
-        clienteNewsletterRepository.Create(clienteNewsletter);
+        clienteNewsletterRepository.create(clienteNewsletter);
     }
 
     public ClienteNewsletter readById(int id) {
-        return clienteNewsletterRepository.ReadById(id);
+        return clienteNewsletterRepository.readById(id);
     }
 
     public List<ClienteNewsletter> readAll() {
-        return clienteNewsletterRepository.ReadAll();
+        return clienteNewsletterRepository.readAll();
     }
 
     public void updateById(ClienteNewsletter clienteNewsletter, int id) {
-        clienteNewsletterRepository.UpdateById(clienteNewsletter, id);
+        clienteNewsletterRepository.updateById(clienteNewsletter, id);
     }
 
     public void deleteById(int id) {
-        clienteNewsletterRepository.DeleteById(id);
+        clienteNewsletterRepository.deleteById(id);
     }
 }

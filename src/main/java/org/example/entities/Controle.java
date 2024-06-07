@@ -2,7 +2,7 @@ package org.example.entities;
 
 import java.util.StringJoiner;
 
-public class Controle {
+public class Controle extends _BaseEntity {
     private int codAdministrador;
     private String nome;
 

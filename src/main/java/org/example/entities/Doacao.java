@@ -3,7 +3,7 @@ package org.example.entities;
 import java.sql.Date;
 import java.util.StringJoiner;
 
-public class Doacao {
+public class Doacao extends _BaseEntity {
 
     private Date dataDoacao;
     private double valor;

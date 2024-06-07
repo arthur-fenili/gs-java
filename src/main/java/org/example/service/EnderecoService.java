@@ -9,22 +9,22 @@ public class EnderecoService {
     private EnderecoRepository enderecoRepository = new EnderecoRepository();
 
     public void create(Endereco endereco) {
-        enderecoRepository.Create(endereco);
+        enderecoRepository.create(endereco);
     }
 
     public Endereco readById(int id) {
-        return enderecoRepository.ReadById(id);
+        return enderecoRepository.readById(id);
     }
 
     public List<Endereco> readAll() {
-        return enderecoRepository.ReadAll();
+        return enderecoRepository.readAll();
     }
 
     public void updateById(Endereco endereco, int id) {
-        enderecoRepository.UpdateById(endereco, id);
+        enderecoRepository.updateById(endereco, id);
     }
 
     public void deleteById(int id) {
-        enderecoRepository.DeleteById(id);
+        enderecoRepository.deleteById(id);
     }
 }

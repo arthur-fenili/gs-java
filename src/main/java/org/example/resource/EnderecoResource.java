@@ -15,32 +15,32 @@ public class EnderecoResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void create(Endereco endereco) {
-        enderecoRepository.Create(endereco);
+        enderecoRepository.create(endereco);
     }
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Endereco readById(@PathParam("id") int id) {
-        return enderecoRepository.ReadById(id);
+        return enderecoRepository.readById(id);
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Endereco> readAll() {
-        return enderecoRepository.ReadAll();
+        return enderecoRepository.readAll();
     }
 
     @PUT
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void updateById(Endereco endereco, @PathParam("id") int id) {
-        enderecoRepository.UpdateById(endereco, id);
+        enderecoRepository.updateById(endereco, id);
     }
 
     @DELETE
     @Path("{id}")
     public void deleteById(@PathParam("id") int id) {
-        enderecoRepository.DeleteById(id);
+        enderecoRepository.deleteById(id);
     }
 }

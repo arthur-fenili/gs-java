@@ -1,8 +1,11 @@
 package org.example.resource;
 
 import jakarta.ws.rs.*;
+import org.example.entities.ClienteNewsletter;
 import org.example.repository.ClienteNewsletterRepository;
 import jakarta.ws.rs.core.MediaType;
+
+import java.util.List;
 
 @Path("cliente-newsletters")
 public class ClienteNewsletterResource {
@@ -12,33 +15,33 @@ public class ClienteNewsletterResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void create(org.example.entities.ClienteNewsletter clienteNewsletter) {
-        clienteNewsletterRepository.Create(clienteNewsletter);
+        clienteNewsletterRepository.create(clienteNewsletter);
     }
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public org.example.entities.ClienteNewsletter readById(@PathParam("id") int id) {
-        return clienteNewsletterRepository.ReadById(id);
+        return clienteNewsletterRepository.readById(id);
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<org.example.entities.ClienteNewsletter> readAll() {
-        return clienteNewsletterRepository.ReadAll();
+    public List<ClienteNewsletter> readAll() {
+        return clienteNewsletterRepository.readAll();
     }
 
     @PUT
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void updateById(org.example.entities.ClienteNewsletter clienteNewsletter, @PathParam("id") int id) {
-        clienteNewsletterRepository.UpdateById(clienteNewsletter, id);
+        clienteNewsletterRepository.updateById(clienteNewsletter, id);
     }
 
     @DELETE
     @Path("{id}")
     public void deleteById(@PathParam("id") int id) {
-        clienteNewsletterRepository.DeleteById(id);
+        clienteNewsletterRepository.deleteById(id);
     }
     }
 

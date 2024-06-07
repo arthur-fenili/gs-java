@@ -9,22 +9,22 @@ public class DoacaoService {
     private DoacaoRepository doacaoRepository = new DoacaoRepository();
 
     public void create(Doacao doacao) {
-        doacaoRepository.Create(doacao);
+        doacaoRepository.create(doacao);
     }
 
     public Doacao readById(int id) {
-        return doacaoRepository.ReadById(id);
+        return doacaoRepository.readById(id);
     }
 
     public List<Doacao> readAll() {
-        return doacaoRepository.ReadAll();
+        return doacaoRepository.readAll();
     }
 
     public void updateById(Doacao doacao, int id) {
-        doacaoRepository.UpdateById(doacao, id);
+        doacaoRepository.updateById(doacao, id);
     }
 
     public void deleteById(int id) {
-        doacaoRepository.DeleteById(id);
+        doacaoRepository.deleteById(id);
     }
 }

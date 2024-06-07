@@ -9,22 +9,22 @@ public class NewsletterService {
     private NewsletterRepository newsletterRepository = new NewsletterRepository();
 
     public void create(Newsletter newsletter) {
-        newsletterRepository.Create(newsletter);
+        newsletterRepository.create(newsletter);
     }
 
     public Newsletter readById(int id) {
-        return newsletterRepository.ReadById(id);
+        return newsletterRepository.readById(id);
     }
 
     public List<Newsletter> readAll() {
-        return newsletterRepository.ReadAll();
+        return newsletterRepository.readAll();
     }
 
     public void updateById(Newsletter newsletter, int id) {
-        newsletterRepository.UpdateById(newsletter, id);
+        newsletterRepository.updateById(newsletter, id);
     }
 
     public void deleteById(int id) {
-        newsletterRepository.DeleteById(id);
+        newsletterRepository.deleteById(id);
     }
 }

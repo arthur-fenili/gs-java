@@ -15,32 +15,32 @@ public class NewsletterResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void create(Newsletter newsletter) {
-        newsletterRepository.Create(newsletter);
+        newsletterRepository.create(newsletter);
     }
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Newsletter readById(@PathParam("id") int id) {
-        return newsletterRepository.ReadById(id);
+        return newsletterRepository.readById(id);
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Newsletter> readAll() {
-        return newsletterRepository.ReadAll();
+        return newsletterRepository.readAll();
     }
 
     @PUT
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void updateById(Newsletter newsletter, @PathParam("id") int id) {
-        newsletterRepository.UpdateById(newsletter, id);
+        newsletterRepository.updateById(newsletter, id);
     }
 
     @DELETE
     @Path("{id}")
     public void deleteById(@PathParam("id") int id) {
-        newsletterRepository.DeleteById(id);
+        newsletterRepository.deleteById(id);
     }
 }

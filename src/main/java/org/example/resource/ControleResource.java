@@ -15,32 +15,32 @@ public class ControleResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void create(Controle controle) {
-        controleRepository.Create(controle);
+        controleRepository.create(controle);
     }
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Controle readById(@PathParam("id") int id) {
-        return controleRepository.ReadById(id);
+        return controleRepository.readById(id);
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Controle> readAll() {
-        return controleRepository.ReadAll();
+        return controleRepository.readAll();
     }
 
     @PUT
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void updateById(Controle controle, @PathParam("id") int id) {
-        controleRepository.UpdateById(controle, id);
+        controleRepository.updateById(controle, id);
     }
 
     @DELETE
     @Path("{id}")
     public void deleteById(@PathParam("id") int id) {
-        controleRepository.DeleteById(id);
+        controleRepository.deleteById(id);
     }
 }

@@ -9,22 +9,22 @@ public class ControleService {
     private ControleRepository controleRepository = new ControleRepository();
 
     public void create(Controle controle) {
-        controleRepository.Create(controle);
+        controleRepository.create(controle);
     }
 
     public Controle readById(int id) {
-        return controleRepository.ReadById(id);
+        return controleRepository.readById(id);
     }
 
     public List<Controle> readAll() {
-        return controleRepository.ReadAll();
+        return controleRepository.readAll();
     }
 
     public void updateById(Controle controle, int id) {
-        controleRepository.UpdateById(controle, id);
+        controleRepository.updateById(controle, id);
     }
 
     public void deleteById(int id) {
-        controleRepository.DeleteById(id);
+        controleRepository.deleteById(id);
     }
 }

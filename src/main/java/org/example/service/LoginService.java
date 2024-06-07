@@ -9,22 +9,21 @@ public class LoginService {
     private LoginRepository loginRepository = new LoginRepository();
 
     public void create(Login login) {
-        loginRepository.Create(login);
+        loginRepository.create(login);
     }
 
-    public Login readById(int id) {
-        return loginRepository.ReadById(id);
+    public Login readById(int id) {return loginRepository.readById(id);
     }
 
     public List<Login> readAll() {
-        return loginRepository.ReadAll();
+        return loginRepository.readAll();
     }
 
     public void updateById(Login login, int id) {
-        loginRepository.UpdateById(login, id);
+        loginRepository.updateById(login, id);
     }
 
     public void deleteById(int id) {
-        loginRepository.DeleteById(id);
+        loginRepository.deleteById(id);
     }
 }

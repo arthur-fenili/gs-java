@@ -15,32 +15,32 @@ public class LoginResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void create(Login login) {
-        loginRepository.Create(login);
+        loginRepository.create(login);
     }
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Login readById(@PathParam("id") int id) {
-        return loginRepository.ReadById(id);
+        return loginRepository.readById(id);
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Login> readAll() {
-        return loginRepository.ReadAll();
+        return loginRepository.readAll();
     }
 
     @PUT
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void updateById(Login login, @PathParam("id") int id) {
-        loginRepository.UpdateById(login, id);
+        loginRepository.updateById(login, id);
     }
 
     @DELETE
     @Path("{id}")
     public void deleteById(@PathParam("id") int id) {
-        loginRepository.DeleteById(id);
+        loginRepository.deleteById(id);
     }
 }

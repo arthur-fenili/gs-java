@@ -9,22 +9,22 @@ public class ClienteService {
     private ClienteRepository clienteRepository = new ClienteRepository();
 
     public void create(Cliente cliente) {
-        clienteRepository.Create(cliente);
+        clienteRepository.create(cliente);
     }
 
     public Cliente readById(int id) {
-        return clienteRepository.ReadById(id);
+        return clienteRepository.readById(id);
     }
 
     public List<Cliente> readAll() {
-        return clienteRepository.ReadAll();
+        return clienteRepository.readAll();
     }
 
     public void updateById(Cliente cliente, int id) {
-        clienteRepository.UpdateById(cliente, id);
+        clienteRepository.updateById(cliente, id);
     }
 
     public void deleteById(int id) {
-        clienteRepository.DeleteById(id);
+        clienteRepository.deleteById(id);
     }
 }

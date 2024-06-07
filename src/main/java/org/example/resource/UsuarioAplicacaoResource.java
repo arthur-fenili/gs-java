@@ -15,32 +15,32 @@ public class UsuarioAplicacaoResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void create(UsuarioAplicacao usuarioAplicacao) {
-        usuarioAplicacaoRepository.Create(usuarioAplicacao);
+        usuarioAplicacaoRepository.create(usuarioAplicacao);
     }
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public UsuarioAplicacao readById(@PathParam("id") int id) {
-        return usuarioAplicacaoRepository.ReadById(id);
+        return usuarioAplicacaoRepository.readById(id);
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<UsuarioAplicacao> readAll() {
-        return usuarioAplicacaoRepository.ReadAll();
+        return usuarioAplicacaoRepository.readAll();
     }
 
     @PUT
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void updateById(UsuarioAplicacao usuarioAplicacao, @PathParam("id") int id) {
-        usuarioAplicacaoRepository.UpdateById(usuarioAplicacao, id);
+        usuarioAplicacaoRepository.updateById(usuarioAplicacao, id);
     }
 
     @DELETE
     @Path("{id}")
     public void deleteById(@PathParam("id") int id) {
-        usuarioAplicacaoRepository.DeleteById(id);
+        usuarioAplicacaoRepository.deleteById(id);
     }
 }
