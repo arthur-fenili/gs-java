@@ -59,7 +59,7 @@ public class LoginRepository extends _BaseRepositoryImpl<Login> {
             logger.logCreate(login);
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RuntimeException("Error creating login: " + e.getMessage());
+            throw new RuntimeException("Error in login: " + e.getMessage());
         }
     }
 
@@ -68,6 +68,7 @@ public class LoginRepository extends _BaseRepositoryImpl<Login> {
         try {
             return QueryProcessor.executeSingleResultQuery(this, rs -> {
                 Login login = new Login(
+                        rs.getInt("COD_LOGIN"),
                         rs.getString("EMAIL"),
                         rs.getString("SENHA"),
                         rs.getString("TIPO_USUARIO")
@@ -86,6 +87,7 @@ public class LoginRepository extends _BaseRepositoryImpl<Login> {
         try {
             return QueryProcessor.executeSelectQuery(this, rs -> {
                 Login login = new Login(
+                        rs.getInt("COD_LOGIN"),
                         rs.getString("EMAIL"),
                         rs.getString("SENHA"),
                         rs.getString("TIPO_USUARIO")

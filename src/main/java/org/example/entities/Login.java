@@ -16,6 +16,14 @@ public class Login extends _BaseEntity {
         this.tipoUsuario = tipoUsuario;
     }
 
+    public Login(int id, String email, String senha, String tipoUsuario) {
+        super(id);
+        this.email = email;
+        this.senha = senha;
+        this.tipoUsuario = tipoUsuario;
+    }
+
+
     public String getEmail() {
         return email;
     }
