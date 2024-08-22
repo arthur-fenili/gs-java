@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class MapsApi {
     public static void main(String[] args) {
-        String apiKey = "AIzaSyC9l-5BoiebqgQ6-EZAaORR4fDtjN9KoUs";
+        String apiKey = "YOUR_API_KEY_HERE";
 
         GeoApiContext context = new GeoApiContext.Builder()
                 .apiKey(apiKey)
